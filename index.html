@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vai ter cuzin hoje?</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      position: relative;
+      background-color: #235789; /* Azul escuro */
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      margin-bottom: 30px;
+      font-size: 36px;
+      color: #ffffff; /* Texto em branco */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    
+    button {
+      margin: 10px;
+      padding: 20px 40px;
+      font-size: 20px;
+      background-color: #eaeaea;
+      color: #000000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+    
+    button:hover {
+      background-color: #d4d4d4;
+    }
+  </style>
+  <script>
+    function redirecionarYouTube() {
+      window.location.href = "https://www.youtube.com/watch?v=NjZDt0swoZY";
+    }
+    
+    function moverBotao() {
+      var buttonNo = document.getElementById("button-no");
+      var bodyWidth = document.body.offsetWidth;
+      var bodyHeight = document.body.offsetHeight;
+      var randomLeft = Math.floor(Math.random() * (bodyWidth - 100));
+      var randomTop = Math.floor(Math.random() * (bodyHeight - 100));
+      
+      buttonNo.style.position = "absolute";
+      buttonNo.style.left = randomLeft + "px";
+      buttonNo.style.top = randomTop + "px";
+    }
+  </script>
+</head>
+<body>
+  <h1>Vai ter cuzin hoje?</h1>
+  <div class="button-container">
+    <button type="button" onclick="redirecionarYouTube()">Sim</button>
+    <button type="button" id="button-no" onclick="moverBotao()">Não</button>
+  </div>
+</body>
+</html>
